@@ -5,7 +5,7 @@ from datetime import datetime
 
 class Note(models.Model):
     title = models.CharField(max_length=300)
-    content = models.TextField()
+    body = models.TextField()
     created_on = models.DateTimeField(default=datetime.now)
 
     def __str__(self):
