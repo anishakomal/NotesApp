@@ -8,3 +8,4 @@ import datetime
 def note(request):
     now = datetime.datetime.now()
     return HttpResponse(now)
+

@@ -6,3 +6,4 @@ from .views import note
 urlpatterns = [
     path('', note, name='note'),
 ]
+
