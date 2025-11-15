@@ -4,5 +4,5 @@ from django.urls import path
 from .views import note
 
 urlpatterns = [
-    path('',note),
+    path('', note, name='note'),
 ]
