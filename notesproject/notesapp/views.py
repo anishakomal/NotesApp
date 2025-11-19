@@ -1,13 +1,16 @@
 from django.shortcuts import render
 
+# Create your views here.
 from django.http import HttpResponse
 from .models import Note
-from .serializers import NoteSerializer
-from rest_framework import generics
-from rest_framework.generics import ListCreateAPIView
+
+import datetime
 
 
+def note(request):
+    now = datetime.datetime.now()
+    return HttpResponse(now)
 
-class NoteListCreateAPIView(generics.ListCreateAPIView):
-    queryset = Note.objects.all()
-    serializer_class = NoteSerializer
+
+def get_notes(request):
+    notes = Note.objects.all()
